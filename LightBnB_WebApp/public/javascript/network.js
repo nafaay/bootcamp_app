@@ -45,7 +45,7 @@ function getAllReservations() {
   });
 }
 
-const submitProperty = function(data) {
+const submitProperty = function (data) {
   return $.ajax({
     method: "POST",
     url: "/api/properties",

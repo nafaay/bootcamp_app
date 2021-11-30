@@ -3,11 +3,9 @@ $(() => {
   const $signUpForm = $(`
   <form id="sign-up-form" class="sign-up-form">
         <p>Sign Up</p>
-
         <div class="sign-up-form__field-wrapper">
             <input type="text" name="name" placeholder="Username">
           </div>
-
         <div class="sign-up-form__field-wrapper">
           <input type="email" name="email" placeholder="Email">
         </div>
@@ -24,7 +22,7 @@ $(() => {
   `);
   window.$signUpForm = $signUpForm;
 
-  $signUpForm.on('submit', function(event) {
+  $signUpForm.on('submit', function (event) {
     event.preventDefault();
 
     const data = $(this).serialize();
@@ -36,9 +34,9 @@ $(() => {
       });
   });
 
-  $('body').on('click', '#sign-up-form__cancel', function() {
+  $('body').on('click', '#sign-up-form__cancel', function () {
     views_manager.show('listings');
     return false;
   });
-      
+
 });
